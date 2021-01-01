@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>roshambo</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8fbe7f6bff.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+      integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <style>
+      #r {
+        color: rgb(255, 99, 132);
+      }
+      #p {
+        color: rgb(54, 162, 235);
+      }
+      #s {
+        color: rgb(255, 205, 86);
+      }
+      #output {
+        white-space: pre;
+        height: 92px;
+        overflow: hidden;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+      }
+      .chartContainer {
+        position: relative;
+      }
+      button {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Rock, Paper, Scissors</h1>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <button id="r"><i class="far fa-hand-rock"></i></button>
+          <button id="p"><i class="far fa-hand-paper"></i></button>
+          <button id="s"><i class="far fa-hand-scissors"></i></button>
+          <div class="row" id="output"></div>
+        </div>
+        <div class="four columns">
+          <div class="chartContainer">
+            <canvas id="scores" width="100%" height="100%"></canvas>
+          </div>
+        </div>
+        <div class="four columns">
+          <div class="chartContainer">
+            <canvas id="stats" width="100%" height="100%"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
